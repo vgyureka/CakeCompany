@@ -11,7 +11,7 @@ namespace CakeCompany.Provider
         {
             return new Order[]
             {
-                new Order ( "CakeBox", "cakebox@gmail.com",  DateTime.Now,  1,  Cake.RedVelvet,  1, 120.25 ),
+                new Order ( "CakeBox", "cakebox@gmail.com", DateTime.Now.Add(TimeSpan.FromMinutes(90)),  1,  Cake.RedVelvet,  1, 120.25 ),
                 new Order ( "ImportantCakeShop", "importantCakeShop@gmail.com",  DateTime.Now,  2,  Cake.Chocolate,  1, 140.25 )
             };
         }

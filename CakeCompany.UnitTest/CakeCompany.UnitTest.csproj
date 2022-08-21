@@ -3,16 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
-  <!--<ItemGroup>
-    <PackageReference Include="Moq" Version="4.15.2" />
-    <PackageReference Include="NUnit" Version="3.13.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\CakeCompany\CakeCompany.csproj" />
-  </ItemGroup>-->
-
+  
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="3.1.0">
       <PrivateAssets>all</PrivateAssets>

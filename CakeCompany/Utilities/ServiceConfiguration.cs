@@ -12,13 +12,12 @@ namespace CakeCompany.Utilities
         public static ServiceProvider AddServices()
         {
             var serviceProvider = new ServiceCollection()
-                .AddLogging()
                 .AddSingleton(Log.Logger)
-                .AddSingleton<IOrderProvider, OrderProvider>()
-                .AddSingleton<IShipmentService, ShipmentService>()
-                .AddSingleton<ICakeProvider, CakeProvider>()
-                .AddSingleton<IPaymentProvider, PaymentProvider>()
-                .AddSingleton<ITransportProvider, TransportProvider>()
+                .AddTransient<IOrderProvider, OrderProvider>()
+                .AddTransient<IShipmentService, ShipmentService>()
+                .AddTransient<ICakeProvider, CakeProvider>()
+                .AddTransient<IPaymentProvider, PaymentProvider>()
+                .AddTransient<ITransportProvider, TransportProvider>()
                 .BuildServiceProvider();
 
             return serviceProvider;

@@ -46,13 +46,13 @@ namespace CakeCompany.Service
                        !_paymentProvider.Process(order).IsSuccessful)
                     {
                         cancelledOrders.Add(order);
-                        Log.Information($"Order for client {order.ClientName} is cancelled !!");
+                        Log.Information($"Order for client [{order.ClientName}] is cancelled !!");
                     }
                     else
                     {
                         product = _cakeProvider.Bake(order);
                         products.Add(product);
-                        Log.Information($"Order for client {order.ClientName} is added !!.");
+                        Log.Information($"Order for client [{order.ClientName}] is added !!.");
                     }
                 }
 
@@ -61,7 +61,7 @@ namespace CakeCompany.Service
                     var transportType = _transportProvider.CheckForAvailability(products);
                     var transport = TransportFactory.GetTransport(transportType);
                     transport.Deliver(products);
-                    Log.Information("Transport is successful.");
+                    Log.Information($"Transport [{transportType}] is used to deliver products.");
                 }
 
             }
